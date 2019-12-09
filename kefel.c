@@ -202,6 +202,7 @@ int main(int argc, char *argv[]) {
       countOfSeq = 0;
     }
     fprintf(f, "ret\n");
+    //case when k<0
   } else if (k < 0) {
     temp = newK;
     counter = 0;
