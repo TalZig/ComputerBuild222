@@ -90,8 +90,6 @@ int main(int argc, char *argv[]) {
       counterOfOnes++;
       newK = newK >> 1;
     }
-    //fprintf(f, "%%edi,%%eax\n"
-    //         "shl $%d,%%eax\n", counterOfOnes - 1);
     counter = 0;
     while (temp > 0) {
       if (temp % 2 == 1) {
@@ -293,30 +291,3 @@ int main(int argc, char *argv[]) {
   }
   return 0;
 }
-
-/*
- *     } else {
-      fprintf(f, "movl %%edi,%%eax\n"
-                 "shl $%d, %%eax\n", counter - 1);
-      counter = 0;
-      while (temp > 1) {
-        if (temp % 2 == 1) {
-          if (counter == 0) {
-            fprintf(f, "addl %%edi,%%eax\n");
-          } else {
-            fprintf(f, "movl %%edi,%%ecx\n");
-            fprintf(f, "shl $%d,%%ecx\n", counter);
-            fprintf(f, "addl %%ecx,%%eax\n");
-          }
-        }
-        temp = temp >> 1;
-        counter++;
-      }
-    }
-    if (k < 0)
-      fprintf(f, "neg %%eax\n");
-    fprintf(f, "ret\n");
-  }
-  return 0;
-}
- */
