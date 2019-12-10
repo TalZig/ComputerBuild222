@@ -113,7 +113,7 @@ int main(int argc, char *argv[]) {
                          "shl $%d,%%eax\n", counter + countOfSeq);
               fprintf(f, "movl %%edi,%%ecx\n"
                          "shl $%d,%%ecx\n", counter);
-              // flag2 sign that we need to add %%edi because at the first time we save lines and not insert it alone.
+              /// flag2 sign that we need to add %%edi because at the first time we save lines and not insert it alone.
               if (flag2) {
                 flag2 = 0;
                 fprintf(f, "sub %%ecx,%%eax\n"
