@@ -457,7 +457,7 @@ int main(int argc, char *argv[]) {
   } else if (k < 0) {
     //there is two options and i dont which one is better so i must check it(there is a cases that the add neg at the
     //end is better and there is some that not.
-    if (countLineWithoutNegInLastLine(f, newK) <= countLineWithNegInLastLine(f, newK)) {
+    if (countLineWithoutNegInLastLine(f, newK) < countLineWithNegInLastLine(f, newK) + 1) {
       printNegativeToFile(f, newK);
     } else {
       printPositiveToFile(f, newK);
